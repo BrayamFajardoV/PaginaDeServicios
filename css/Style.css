@@ -1,0 +1,428 @@
+*{
+    /*Quita todas las separaciones de los bordes*/
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    /*font family sirve para el tamano de letra*/
+    font-family: 'Open Sans', sans-serif;
+}
+/*La clase contenedor sirve para ordenar el html */
+
+.contenedor{
+    /*Este padding sirve para seccionar las secciones del css*/
+    padding: 60px 0;
+    /*El width sirve para que el conedor este en el 95% de la pagina en este caso*/
+    width: 95%;
+    max-width: 1000px;
+    /*margin auto sirve para centrar todo*/
+    margin: auto;
+    /*Si algo se sale del contenedor que lo esconda*/
+    overflow: hidden;
+}
+
+/*vamos a configurar los estilos generales*/
+
+.titulo{
+    /*Todos los titulos tendran este color*/
+    color: #642a63;
+    /*El tamano de los titulos tendran este tamano*/
+    font-size: 40px;
+    /*Centrar todos los titulos*/
+    text-align: center;
+    /*Margin bottom sirve para la separacion entre las secciones*/
+    margin-bottom: 60px;
+}
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    height: 600px;
+    /*Color para el fondo sacado de la pagina uigradient y agregamos una url para la imagen */
+    background: #ff00cc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(216, 13, 81, 0.479),hsla(318, 19%, 42%, 0.5)), url(../img/1530865596_280781_1530866540_noticia_normal.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(216, 13, 81, 0.479),hsla(318, 19%, 42%, 0.5)), url(../img/1530865596_280781_1530866540_noticia_normal.jpg);
+    
+    /*Sirve para que la imagen tome todo el header*/
+    background-size: cover;
+    /*las siguientes lineas sirven para que la imagen quede estatica al hacer scroll*/
+    background-attachment: fixed;
+    position: relative;
+}
+
+/*BARRA DE NAVEGACION*/
+
+nav{
+    /*Para colocar todos los links de la barra de navegacion a la derecha */
+    text-align: right;
+    /*Para separas los link de arriba y colocarlos de mejor manera*/
+    padding: 45px 50px 0 0 ;
+}
+/*Este bloque sirve para ponerle estilos a los links*/
+nav > a{
+    /*Color del link*/
+    color:aliceblue;
+    /*La decoracion de abajo se quite*/
+    text-decoration: none;
+    /*font weith para el relleno de la letra*/
+    font-weight: 400;
+    /*Para darle separacion entre las letras*/
+    margin-right: 50px;
+}
+/*Este bloque para que cuando se acerque el mouse aparezca algo*/
+nav > a:hover{
+    background-color: purple;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Configurar el wave*/
+.wave{
+    /*para que se pueda mover por todo el header*/
+    position: absolute;
+    /*Para bajarlo a lo ultimo del header*/
+    bottom: 0;
+    /*Para que tome toda la pagina*/
+    width: 100%;
+    /*Para cambiar el color tienes que ir al index.html*/
+}
+/*Configurar el header el texto que lleva*/
+
+header .textos-header{
+    /*Utilizamos el flex para*/
+    display: flex;
+    /*  */
+    height: 430px;
+    width: 100%;
+    /*para centrar de manera vertical */
+    align-items: center;
+    /*Para centrar horizontalmente*/
+    justify-content: center;
+    /*Para que el titulo y el slogan no se vean pegados hacemos lo siguiente*/
+    flex-direction: column;
+    /*para centrarlo completamente*/
+    text-align:center;
+
+}
+/*configurar las letras del titulo*/
+.textos-header h1{
+    /*Para el tamano de letra*/
+    font-size: 50px;
+    /*color de el titulo*/
+    color: white;
+
+}
+.textos-header h2{
+    /*Para el tamano de letra*/
+    font-size: 30px;
+    /*color de el titulo*/
+    color: white;
+    /*Grosor de la letra*/
+    font-weight: 300;
+    
+}
+
+/*SECCION SOBRE NOSOTROS*/
+
+.contenedor-sobre-nosotros{
+    display: flex;
+    /*esto sirve para repartir el espacion equitativamente*/
+    justify-content: space-evenly;
+}
+/*configuracion de la imagen*/
+.imagen-about-us{
+    /*Amcho de la imagen*/
+    width: 48%;
+}
+.sobre-nosotros .contenido-textos{
+    /**/
+    width: 48%;
+} 
+.contenido-textos h3{
+    /*El contenido del texto se separa del otro*/
+    margin-bottom:25px ;
+}
+.contenido-textos h3 span{
+    /*color de el fondo del numero*/
+    background:#4d0686;
+    /*Color de letra*/
+    color: white;
+    /*Borde del fondo*/
+    border-radius: 50%;
+    /*display in block para que tenga propiedad de bloque*/
+    display: inline-block;
+    /*para que se centre dentro del contorno morado*/
+    text-align: center;
+    /*Tamano del fondo*/
+    width: 30px;
+    /*sirve para que se expanda el contorno*/
+    height: 30px;
+    /*para centrarlos de mejor manera*/
+    padding: 2px ;
+    /*Para darle la sombra*/
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    /*para dar separacion en las letras*/
+    margin-right: 5px;
+}
+
+/*EL siguente bloque sirve para separar la letra del texto */
+
+.contenido-textos p{
+    /*separacion del texto*/
+    padding: 0px 0px 30px 16px;    
+}
+
+
+
+/*PORTAFOLIO*/
+
+.portafolio{
+    /*Cambiar el fondo de la seccion*/
+    background: #f2f2f2 ;
+}
+.galeria-port{
+    display:flex ;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.imagen-port{
+    width: 24%;
+    /*Sirve para la separacion entre las dos filas*/
+    margin-bottom:10px;
+    /*El heght sirve para colocarle el tamano a la imagen*/
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    /*Sirve para que al pasar el mouse enciama se denote la manito y no el click*/
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0,0,0, .5);
+}
+
+.imagen-port > img{
+    width:100% ;
+    height:100%;
+    object-fit: cover;
+    display: inline-block;
+
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0); 
+    background: hsla(273, 91%, 27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: white;
+}
+
+.imagen-port:hover  .hover-galeria{
+     transform: scale(1); 
+}
+
+/*QUE DICEN NUESTROS CLIENTES*/
+
+.cards{
+    display: flex;
+    /*Repartir equitativamente las dos imagenes en el espacio*/
+    justify-content: space-evenly;
+}
+
+.cards .card{
+    /*para el fondo del card*/
+    background: #4d0686;
+    display: flex;
+    /*Propiedades para la altura y el ancho  del card*/
+    width: 46%;
+    height: 200px;
+    /*para centrar los elementos*/
+    align-items: center;
+    /*repartir equitativamente*/
+    justify-content: space-evenly;
+    /*sirve para el borde de la carta*/
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img{
+    /*hacer un cuadrado con la imagen*/
+    /* width: 100%; */ /*Comentar esta linea si no hace el circulo perfecto*/
+    height: 100px;
+    /*para que la imagen quede en el espacio definido*/
+    object-fit: cover;
+    /*Para que le coloque el borde a la imagen*/
+    border: 3px solid #fff ;
+    /*para hacerlo redondo*/
+    border-radius: 50%;
+
+}
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: white;
+
+}
+
+.cards .card > .contenido-texto-card p{
+    /*Sirve para que todo le texto se vea con un espaciado*/
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/*NUESTROS SERVICIOS*/
+
+.about-services{
+    /*Fondo de la seccion*/
+    background-color: #f2f2f2;    
+    padding-bottom: 30px;
+}
+
+.servicio-cont{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+.servicio-ind img{
+    /*Sirve para  que las imagenes de dividan */
+    width: 90%;
+
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+
+.servicio-ind p{
+   font-weight: 300;
+   text-align: justify;
+}
+
+/*FOOTER*/
+
+footer{
+    /*COLOR DEL FONDO*/
+    background-color: #414141;
+    /*espaciado entre el borde de la pagina*/
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+.contedor-footer{
+    display: flex;
+    /* width:90%; */
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+
+    border-bottom: 50px solid purple;
+}
+
+.content-foo h4{
+    color: #f2f2f2;
+    /*Agregar la linea */
+    border-bottom: 3px solid #af20d3;
+    /*separar la linea del texto */
+    padding-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+    padding-top:10px;
+}
+.titulo-final{
+
+    text-align:center;
+    font-size:24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width:900px){
+        header{
+            /*hacer que la imagen de fondo se vea centrada*/
+            background-position:center;
+        }
+        .contenedor-sobre-nosotros{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .sobre-nosotros .contenido-textos{
+            /*  que ocupe el 90% de la pagina*/
+            width: 90%;
+        }
+        .imagen-about-us{
+            /**que la imagen tome el 90%*/
+            width: 90%;
+        }
+        /*galeria*/
+        .imagen-port{
+            /*que las imagenes ocupen el 44% de la pantalla*/
+            width: 44%;
+        }
+        /*clientes*/
+        .cards{
+           /*hacer que las tarjetas se pongan una encima de  la otra*/
+            flex-direction: column ;
+            /*centrar verticalmente*/
+            justify-content: center;
+            /*centrar horizontalmente*/
+            align-items: center;
+        }
+        .cards .card{
+            /*para que cada una de las tarjetas midan 90%*/
+            width: 90%;
+            margin-bottom: 15px;
+        }
+        /*Servicios*/
+        .servicio-cont{
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .servicio-ind{
+            width: 100%;
+            text-align: center;
+        }
+        .servicio-ind:nth-child(1) , .servicio-ind:nth-child(2){
+            margin-bottom: 60px;
+        }
+        .servicio-ind img{
+            width: 90%;
+        }
+
+        .contedor-footer{
+            flex-direction: column;
+        }
+        .content-foo h4{
+            border:none;
+            text-align: center;
+            padding: 20px;
+        }
+        .content-foo p{
+            color: #ccc;
+            border-bottom:1px solid #f2f2f2 ;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+}
